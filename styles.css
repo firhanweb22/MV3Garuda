@@ -1,0 +1,185 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(90deg, #ff0000, #ffffff);
+    color: #ff0000;
+}
+
+/* Card styles */
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card i {
+    font-size: 3rem;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Transform lines into 'X' when menu is active */
+#menu-toggle:checked + .burger-menu span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .burger-menu span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .burger-menu span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hide default checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Navbar Collapse Responsiveness */
+.collapse.navbar-collapse {
+    display: none;
+}
+
+#menu-toggle:checked ~ .collapse.navbar-collapse {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    /* Hide burger menu on large screens */
+    .burger-menu {
+        display: none;
+    }
+
+    /* Show the navbar menu by default on large screens */
+    .collapse.navbar-collapse {
+        display: flex !important;
+    }
+}
+
+
+/* Transform lines into 'X' when menu is active */
+#menu-toggle:checked + .burger-menu span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .burger-menu span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .burger-menu span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hide default checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Navbar collapse for smaller screens */
+.collapse.navbar-collapse {
+    display: none;
+}
+
+#menu-toggle:checked ~ .collapse.navbar-collapse {
+    display: block;
+}
+/* Hero Section Styles */
+.hero-section {
+    background: url('https://pindad.com/uploads/images/article/full/PT_Pindad_-_MV3_Garuda_Limousine_2_resize1.jpg') no-repeat center center/cover;
+    position: relative;
+    padding: 300px 0; /* Default padding */
+    min-height: 100%; /* Tinggi minimum default */
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Overlay Effect */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* Teks tetap di atas overlay */
+}
+
+/* Responsiveness */
+@media (min-width: 992px) {
+    .hero-section {
+        padding: 150px 0; /* Lebih tinggi di layar besar */
+        min-height: 100vh; /* Tinggi lebih besar di layar besar */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0; /* Tinggi lebih rendah di layar kecil */
+        min-height: 40vh; /* Tinggi lebih kecil di layar kecil */
+    }
+}
+/* Features Section Styles */
+
+@media (max-width: 768px) {
+    .carousel-item .row {
+        flex-direction: column; /* Ubah menjadi kolom pada layar kecil */
+        align-items: center;   /* Pusatkan konten */
+    }
+
+    .carousel-item .col-12 {
+        margin-bottom: 20px; /* Beri jarak antar elemen */
+    }
+}
+.card {
+    height: 100%; /* Agar kartu memiliki tinggi yang konsisten */
+    display: flex; /* Mengaktifkan Flexbox */
+    flex-direction: column; /* Susun elemen secara vertikal */
+    justify-content: center; /* Elemen terpusat vertikal */
+    align-items: center; /* Elemen terpusat horizontal */
+    text-align: center; /* Teks di tengah */
+}
+
+.card img {
+    margin-bottom: 1rem; /* Jarak antara gambar dan teks */
+    width: 120px; /* Ukuran gambar */
+    height: 120px;
+    object-fit: cover; /* Sesuaikan gambar tanpa distorsi */
+}
+
+.card h4 {
+    margin-top: 0.5rem; /* Jarak kecil antara judul dan gambar */
+}
+
+.card p {
+    color: #7d6c6c; /* Warna teks abu-abu */
+}
+
